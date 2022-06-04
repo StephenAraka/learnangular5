@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   query: string;
   artists: any[];
+
+  showArtist(item: { name: string, shortname: string }) {
+    this.query = item.name;
+  }
 
   constructor() {
     this.query = 'Barot';
